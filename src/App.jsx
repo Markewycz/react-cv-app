@@ -1,8 +1,22 @@
+import LeftSide from "./components/LeftSide";
+import RightSide from "./components/RightSide";
+
+function Document() {
+  return (
+    <div className="bg-slate-50 shadow-md shadow-black grid grid-cols-[1fr_2fr] ">
+      <LeftSide />
+      <RightSide />
+    </div>
+  );
+}
+
 export default function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-      <h2 className="text-xl">Changes has been made...</h2>
-    </>
+    <div className="w-screen h-screen grid justify-center">
+      {/* <Editor /> */}
+      <div className="flex justify-center items-center p-8">
+        <Document />
+      </div>
+    </div>
   );
 }
